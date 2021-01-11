@@ -18,7 +18,9 @@ public class SerchResultActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         DataService dataService = new DataService();
-        SearchData searchData = dataService.getSearchChannels(29);
+        int id= getIntent().getIntExtra("id",0);
+        Log.d("tag", "onCreate: "+id);
+        SearchData searchData = dataService.getSearchChannels(id);
         setContentView(R.layout.activity_serch_result);
         searchResultRecycler = findViewById(R.id.searchResultLilt);
         layoutManager = new LinearLayoutManager(this);
