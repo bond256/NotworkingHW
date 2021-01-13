@@ -12,10 +12,10 @@ import com.example.networking.model.video.SearchData;
 import com.example.networking.model.channels.Channels;
 
 public class MainActivity extends AppCompatActivity implements ChannelsAdapter.OnClickListener {
-    RecyclerView channelsRecycler;
-    ChannelsAdapter channelsAdapter;
-    Channels data;
-    LinearLayoutManager layoutManager;
+    private RecyclerView channelsRecycler;
+    private ChannelsAdapter channelsAdapter;
+    private Channels data;
+    private LinearLayoutManager layoutManager;
     final String TAG = "tag";
 
     @Override
